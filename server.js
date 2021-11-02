@@ -15,9 +15,9 @@ const port = process.env.PORT || 8080
 
 app
 .use(requireHTTPS)
-.use(express.static('./dist/Todo-App-Angular'));
+.use(express.static('./dist/Todo-Validation'));
 
-app.get('/*', (req, res) => res.sendFile('index.html', {root: './dist/Todo-App-Angular'}));
+app.get('/*', (req, res) => res.sendFile('index.html', {root: './dist/Todo-Validation'}));
 
 app.listen(port, () => {
     console.log(`My Angular application is now running! http://localhost:${port}`)
