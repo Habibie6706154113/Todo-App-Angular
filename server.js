@@ -14,7 +14,7 @@ const app = express();
 const port = process.env.PORT || 8080
 
 app
-//.use(requireHTTPS)
+.use(requireHTTPS)
 .use(express.static('./dist/todo-validation'));
 
 app.get('/*', (req, res) => res.sendFile('index.html', {root: './dist/todo-validation'}));
